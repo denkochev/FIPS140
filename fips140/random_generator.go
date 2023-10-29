@@ -31,7 +31,7 @@ func GetRandomSet(length int) []uint64 {
 			block = 32
 		}
 
-		for j := 0; j < block; j++ {
+		for j := 1; j < block; j++ {
 			curRandBit := uint64(rand.Intn(2))
 			curBlock = curBlock | curRandBit
 			curBlock = curBlock << 1
