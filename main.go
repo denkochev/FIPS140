@@ -13,4 +13,8 @@ func main() {
 	monobit := fips140.Monobit(randset)
 	fmt.Println("The Monobit Test -> ", monobit)
 
+	longrun, streak := fips140.LongRuns(randset)
+	fmt.Println("The long runs Test -> ", longrun, " streak for this set = ", streak)
+	fmt.Println("----------------------------------------------------------")
+
 }
