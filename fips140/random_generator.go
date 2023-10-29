@@ -1,6 +1,7 @@
 package fips140
 
 import (
+	"fmt"
 	"math/rand"
 )
 
@@ -41,4 +42,20 @@ func GetRandomSet(length int) []uint64 {
 	}
 
 	return rand_set
+}
+
+func PrintAllBits(blocks []uint64) string {
+	result := ""
+
+	for i := 0; i < len(blocks); i++ {
+		if i == len(blocks)-1 {
+			result += fmt.Sprintf("%32b", blocks[i])
+			fmt.Printf("%32b\n", blocks[i])
+		} else {
+			result += fmt.Sprintf("%064b", blocks[i])
+			fmt.Printf("%064b\n", blocks[i])
+		}
+	}
+
+	return result
 }
