@@ -32,10 +32,10 @@ func GetRandomSet(length int) []uint64 {
 			block = 32
 		}
 
-		for j := 1; j < block; j++ {
+		for j := 1; j <= block; j++ {
+			curBlock = curBlock << 1
 			curRandBit := uint64(rand.Intn(2))
 			curBlock = curBlock | curRandBit
-			curBlock = curBlock << 1
 		}
 		//fmt.Printf("%064b\n", curBlock)
 		rand_set[i] = curBlock
@@ -49,11 +49,11 @@ func PrintAllBits(blocks []uint64) string {
 
 	for i := 0; i < len(blocks); i++ {
 		if i == len(blocks)-1 {
-			result += fmt.Sprintf("%32b", blocks[i])
-			fmt.Printf("%32b\n", blocks[i])
+			result += fmt.Sprintf("%032b", blocks[i])
+			//fmt.Printf("%032b\n", blocks[i])
 		} else {
 			result += fmt.Sprintf("%064b", blocks[i])
-			fmt.Printf("%064b\n", blocks[i])
+			//fmt.Printf("%064b\n", blocks[i])
 		}
 	}
 
