@@ -1,6 +1,6 @@
 package fips140
 
-func LongRuns(bits_set []uint64) (bool, int) {
+func LongRun(bits_set []uint64) (bool, int) {
 	maxStreak, curStreak := 0, 0
 
 	var curValue int = -1

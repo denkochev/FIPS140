@@ -1,6 +1,6 @@
 package fips140
 
-func SequencesRuns(bits_set []uint64) (bool, map[int]int) {
+func Runs(bits_set []uint64) (bool, map[int]int) {
 	/*
 	   table from this specs [pg.45]
 	   https://csrc.nist.gov/files/pubs/fips/140-1/upd1/final/docs/fips1401.pdf
