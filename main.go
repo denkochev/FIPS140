@@ -13,8 +13,15 @@ func main() {
 	monobit := fips140.Monobit(randset)
 	fmt.Println("The Monobit Test -> ", monobit)
 
-	longrun, streak := fips140.LongRuns(randset)
-	fmt.Println("The long runs Test -> ", longrun, " streak for this set = ", streak)
-	fmt.Println("----------------------------------------------------------")
+	longrun, streak := fips140.LongRun(randset)
+	fmt.Println("The Long Run Test -> ", longrun, "| streak for this set = ", streak)
+
+	pokerTest := fips140.Poker(randset)
+	fmt.Println("The Poker Test -> ", pokerTest)
+
+	longsequence, curSequenceTable := fips140.Runs(randset)
+	fmt.Println("The Runs Test -> ", longsequence, "| table for this set = ", curSequenceTable)
+
+	fmt.Println("---------------------------------------------------------------------------------------------------")
 
 }
